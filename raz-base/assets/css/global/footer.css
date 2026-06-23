@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Footer global. Espelha template-parts/global/site-footer.php.
+   ========================================================================== */
+.raz-footer {
+	margin-top: var(--raz-sp-5);
+	background: var(--raz-surface);
+	border-top: 1px solid var(--raz-line);
+	color: var(--raz-ink);
+}
+.raz-footer__inner {
+	display: grid;
+	gap: var(--raz-sp-3);
+	padding-block: var(--raz-sp-4);
+}
+.raz-footer__name { font-weight: 700; font-size: var(--raz-fs-lg); }
+.raz-footer__address { font-style: normal; color: var(--raz-muted); margin-top: var(--raz-sp-1); }
+.raz-footer__contact { display: flex; flex-direction: column; gap: 0.25rem; }
+.raz-footer__contact a { color: var(--raz-primary); }
+.raz-menu--footer { display: flex; flex-wrap: wrap; gap: var(--raz-sp-2); }
+.raz-menu--footer a { color: var(--raz-muted); }
+.raz-menu--footer a:hover { color: var(--raz-primary); }
+
+.raz-footer__bar {
+	border-top: 1px solid var(--raz-line);
+	padding-block: var(--raz-sp-2);
+	font-size: var(--raz-fs-sm);
+	color: var(--raz-muted);
+}
+
+@media (min-width: 768px) {
+	.raz-footer__inner { grid-template-columns: 2fr 1fr 1fr; align-items: start; }
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   Home "Em construção" — RAZ Consulting. Minimalista: branco, logo serifada,
+   corpo monoespaçado, rodapé cinza. Espelha coming-soon.php (página cheia).
+   ========================================================================== */
+.raz-coming {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: var(--raz-base);
+	color: var(--raz-ink);
+	padding: clamp(2.25rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+/* Logo (topo, esquerda) */
+.raz-coming__top { flex: 0 0 auto; }
+.raz-coming__logo { display: inline-block; line-height: 0; }
+.raz-coming__logo img,
+.raz-coming__logo .custom-logo {
+	height: clamp(40px, 6vw, 60px);
+	width: auto;
+}
+.raz-coming__wordmark {
+	font-family: var(--raz-font-display);
+	font-style: italic;
+	font-size: clamp(2.2rem, 5vw, 3rem);
+	line-height: 1;
+	color: var(--raz-ink);
+}
+
+/* Corpo (texto da marca, monoespaçado) */
+.raz-coming__main {
+	margin-top: clamp(3.5rem, 16vh, 11rem);
+	max-width: 680px;
+}
+.raz-coming__body {
+	font-family: var(--raz-font);
+	font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1.05rem);
+	line-height: 2;
+	letter-spacing: 0.01em;
+	color: #2a2a2a;
+}
+
+/* Rodapé (contato, monoespaçado, caixa-alta, cinza) — fixado embaixo */
+.raz-coming__footer {
+	margin-top: auto;
+	padding-top: clamp(3rem, 10vh, 6rem);
+	font-family: var(--raz-font);
+	font-size: 0.72rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--raz-muted);
+	line-height: 2.1;
+}
+.raz-coming__footer a { color: var(--raz-muted); transition: color 0.2s ease; }
+.raz-coming__footer a:hover { color: var(--raz-ink); }
+.raz-coming__contact a { margin-right: 1.5rem; }
+.raz-coming__copy { margin-top: 0.25rem; }
+
+@media (min-width: 768px) {
+	.raz-coming__contact a + a { margin-left: 0.5rem; }
+}

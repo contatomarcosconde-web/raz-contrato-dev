@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Base: tipografia, container, botões, utilitários de acessibilidade.
+   ========================================================================== */
+body {
+	font-family: var(--raz-font);
+	font-size: var(--raz-fs-md);
+	line-height: var(--raz-lh);
+	color: var(--raz-ink);
+	background: var(--raz-base);
+}
+
+h1, h2, h3, h4 { font-family: var(--raz-font-display); font-weight: 600; }
+
+a { color: var(--raz-primary); }
+a:hover { color: var(--raz-primary-dark); }
+
+/* Container central */
+.raz-container {
+	width: 100%;
+	max-width: var(--raz-container);
+	margin-inline: auto;
+	padding-inline: var(--raz-container-pad);
+}
+
+.raz-content { display: block; }
+
+/* Botão padrão (token-based) */
+.raz-btn {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	background: var(--raz-primary);
+	color: #fff;
+	border-radius: var(--raz-radius);
+	font-weight: 600;
+	transition: background-color 0.2s ease;
+}
+.raz-btn:hover { background: var(--raz-primary-dark); color: #fff; }
+
+/* Foco visível em todo elemento interativo */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+	outline: 3px solid var(--raz-accent);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Acessibilidade: leitores de tela / skip link */
+.screen-reader-text {
+	border: 0; clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%);
+	height: 1px; width: 1px; margin: -1px; overflow: hidden; padding: 0;
+	position: absolute !important; word-wrap: normal !important;
+}
+.raz-skip-link {
+	position: absolute; left: -999px; top: 0; z-index: 2000;
+	background: #fff; color: var(--raz-ink); padding: 0.75rem 1rem;
+}
+.raz-skip-link:focus { left: 0; }
+
+/* Bloqueia scroll quando o drawer/popup está aberto */
+body.raz-no-scroll { overflow: hidden; }
+
+/* Trilha de migalhas (raz_breadcrumb) */
+.raz-breadcrumb ol {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.4rem;
+	font-size: var(--raz-fs-sm);
+	color: var(--raz-muted);
+}
+.raz-breadcrumb a { color: var(--raz-muted); }
+.raz-breadcrumb a:hover { color: var(--raz-primary); }
+.raz-breadcrumb [aria-current="page"] { color: var(--raz-ink); font-weight: 600; }
+.raz-breadcrumb__sep { color: var(--raz-line); }

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1440px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "custom": true,
+      "palette": [
+        { "slug": "primary",   "color": "#1487fa", "name": "Primária" },
+        { "slug": "primary-dark", "color": "#0f6fd6", "name": "Primária escura" },
+        { "slug": "accent",    "color": "#1487fa", "name": "Destaque" },
+        { "slug": "ink",       "color": "#16191d", "name": "Texto" },
+        { "slug": "muted",     "color": "#6b7280", "name": "Texto suave" },
+        { "slug": "line",      "color": "#e5e7eb", "name": "Linha" },
+        { "slug": "surface",   "color": "#f7f8fa", "name": "Superfície" },
+        { "slug": "dark",      "color": "#0e0f12", "name": "Escuro" },
+        { "slug": "base",      "color": "#ffffff", "name": "Base" }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+          "slug": "base",
+          "name": "Inter"
+        },
+        {
+          "fontFamily": "'Playfair Display', Georgia, 'Times New Roman', serif",
+          "slug": "display",
+          "name": "Playfair Display"
+        }
+      ],
+      "fontSizes": [
+        { "slug": "sm",   "size": "0.875rem", "name": "Pequeno" },
+        { "slug": "md",   "size": "1rem",     "name": "Médio" },
+        { "slug": "lg",   "size": "1.25rem",  "name": "Grande" },
+        { "slug": "xl",   "size": "clamp(1.5rem, 1rem + 2vw, 2.25rem)",  "name": "XL" },
+        { "slug": "2xl",  "size": "clamp(2rem, 1.2rem + 3vw, 3.25rem)",  "name": "2XL" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "em", "rem", "vh", "vw", "%"],
+      "spacingSizes": [
+        { "slug": "10", "size": "0.5rem",  "name": "1" },
+        { "slug": "20", "size": "1rem",    "name": "2" },
+        { "slug": "30", "size": "1.5rem",  "name": "3" },
+        { "slug": "40", "size": "2.5rem",  "name": "4" },
+        { "slug": "50", "size": "4rem",    "name": "5" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--base)",
+      "text": "var(--wp--preset--color--ink)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--base)",
+      "fontSize": "var(--wp--preset--font-size--md)",
+      "lineHeight": "1.6"
+    }
+  }
+}

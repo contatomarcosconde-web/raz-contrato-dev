@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Drawer mobile. Espelha template-parts/global/menu-mobile.php + menu-mobile.js.
+   ========================================================================== */
+.raz-drawer[hidden] { display: none; }
+.raz-drawer {
+	position: fixed; inset: 0;
+	z-index: var(--raz-z-drawer);
+}
+.raz-drawer__overlay {
+	position: absolute; inset: 0;
+	background: rgba(17, 24, 39, 0.5);
+	opacity: 0; transition: opacity 0.25s ease;
+}
+.raz-drawer__panel {
+	position: absolute; top: 0; right: 0; bottom: 0;
+	width: min(86vw, 360px);
+	background: var(--raz-base);
+	padding: var(--raz-sp-4) var(--raz-sp-3);
+	box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+	transform: translateX(100%);
+	transition: transform 0.25s ease;
+	overflow-y: auto;
+	display: flex; flex-direction: column; gap: var(--raz-sp-3);
+}
+.raz-drawer.is-open .raz-drawer__overlay { opacity: 1; }
+.raz-drawer.is-open .raz-drawer__panel { transform: translateX(0); }
+
+.raz-drawer__close { align-self: flex-end; font-size: 2rem; line-height: 1; width: 44px; height: 44px; color: var(--raz-ink); }
+
+.raz-menu--mobile { display: flex; flex-direction: column; gap: var(--raz-sp-2); }
+.raz-menu--mobile a { display: block; padding: 0.5rem 0; font-size: var(--raz-fs-lg); color: var(--raz-ink); border-bottom: 1px solid var(--raz-line); }
+.raz-menu--mobile a:hover { color: var(--raz-primary); }
+
+.raz-langs--mobile { margin-top: var(--raz-sp-2); }
+
+@media (min-width: 1024px) {
+	.raz-drawer { display: none !important; }
+}

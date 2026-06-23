@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Header global (mobile-first). Espelha template-parts/global/site-header.php.
+   ========================================================================== */
+.raz-header {
+	position: sticky;
+	top: 0;
+	z-index: var(--raz-z-header);
+	background: var(--raz-base);
+	border-bottom: 1px solid var(--raz-line);
+}
+.raz-header__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--raz-sp-2);
+	min-height: var(--raz-header-h);
+}
+.raz-header__title { font-weight: 700; font-size: var(--raz-fs-lg); color: var(--raz-ink); }
+.raz-header__brand img { max-height: 48px; width: auto; }
+
+.raz-header__aux { display: flex; align-items: center; gap: var(--raz-sp-2); }
+
+/* Menu desktop escondido no mobile (drawer assume) */
+.raz-header__nav { display: none; }
+
+/* Seletor de idioma */
+.raz-langs { display: inline-flex; gap: 0.25rem; }
+.raz-langs__item { padding: 0.25rem 0.5rem; font-size: var(--raz-fs-sm); color: var(--raz-muted); border-radius: 4px; }
+.raz-langs__item.is-current { color: var(--raz-primary); font-weight: 700; }
+
+/* Hambúrguer */
+.raz-burger { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; }
+.raz-burger__box { position: relative; width: 24px; height: 2px; background: var(--raz-ink); display: block; }
+.raz-burger__line { position: absolute; left: 0; width: 24px; height: 2px; background: var(--raz-ink); }
+.raz-burger__line::before { content: ""; position: absolute; left: 0; top: -7px; width: 24px; height: 2px; background: var(--raz-ink); }
+.raz-burger__line::after { content: ""; position: absolute; left: 0; top: 7px; width: 24px; height: 2px; background: var(--raz-ink); }
+
+/* Desktop: mostra menu inline, esconde hambúrguer */
+@media (min-width: 1024px) {
+	.raz-header__nav { display: block; }
+	.raz-burger { display: none; }
+	.raz-menu { display: flex; gap: var(--raz-sp-3); }
+	.raz-menu a { color: var(--raz-ink); font-weight: 500; }
+	.raz-menu a:hover { color: var(--raz-primary); }
+}

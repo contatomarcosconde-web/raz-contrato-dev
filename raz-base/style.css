@@ -1,0 +1,21 @@
+/*
+Theme Name: Raz Base
+Theme URI: https://razconsulting.com.br/
+Author: Raz Consulting
+Author URI: https://razconsulting.com.br/
+Description: Tema-base modular da Raz Consulting, feito para evoluir com IA: modular (seções espelhadas), multi-idioma (PT/EN/ES), popups e formulários com registry de provedores, SEO completo (OG/Schema/robots/sitemap/llms), painel de opções e manutenção sem SSH. Instale, ative e diga ao agente para ler o README do tema para começar.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: raz
+Tags: custom-theme, modular, multilingual, accessibility-ready
+*/
+
+/*
+ * Este arquivo carrega apenas o cabeçalho do tema e os tokens base.
+ * Os tokens e o reset ficam em assets/css/base/ (enfileirados em inc/enqueue.php).
+ * Regra do contrato: uma fonte de verdade — não duplicar CSS aqui.
+ */

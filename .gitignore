@@ -1,0 +1,18 @@
+# Estado/locks por site (contém dados sensíveis de deploy) — NUNCA versionar aqui.
+_pop/
+
+# Contrato-template original (substituído pelo README.md da raiz).
+CONTRATO-DESENVOLVIMENTO-TEMAS.v2.md
+
+# Sistema operacional / editores
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Backups gerados pela ferramenta de manutenção do tema
+*.bak
+*.bak-*

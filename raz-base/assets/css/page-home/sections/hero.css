@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Seção HERO (home). Espelha template-parts/page-home/sections/hero.php.
+   Prefixo .raz-hero — não vaza para outras seções.
+   ========================================================================== */
+.raz-hero {
+	background: linear-gradient(180deg, var(--raz-surface), var(--raz-base));
+	border-bottom: 1px solid var(--raz-line);
+}
+.raz-hero__inner {
+	padding-block: var(--raz-sp-5);
+	display: flex;
+	flex-direction: column;
+	gap: var(--raz-sp-2);
+	align-items: flex-start;
+}
+.raz-hero__title {
+	font-size: var(--raz-fs-2xl);
+	color: var(--raz-ink);
+	max-width: 18ch;
+}
+.raz-hero__sub {
+	font-size: var(--raz-fs-lg);
+	color: var(--raz-muted);
+	max-width: 60ch;
+}
+.raz-hero__cta { margin-top: var(--raz-sp-2); }
+
+@media (min-width: 768px) {
+	.raz-hero__inner { padding-block: calc(var(--raz-sp-5) * 1.5); }
+}

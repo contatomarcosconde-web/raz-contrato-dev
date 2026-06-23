@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Base mínima dos formulários (o visual fica por conta do CSS de cada form).
+   Apenas estados de mensagem e o honeypot. Espelha render.php + form-engine.js.
+   ========================================================================== */
+.raz-form { position: relative; }
+
+/* Honeypot (caso o CSS do form sobrescreva o inline) */
+.raz-form input[name="raz_hp"] {
+	position: absolute !important;
+	left: -9999px !important;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Mensagem de status do envio */
+.raz-form__msg {
+	margin-top: var(--raz-sp-2, 1rem);
+	padding: 0.75rem 1rem;
+	border-radius: var(--raz-radius, 0.5rem);
+	font-size: var(--raz-fs-sm, 0.875rem);
+	display: none;
+}
+.raz-form__msg.is-loading,
+.raz-form__msg.is-success,
+.raz-form__msg.is-error { display: block; }
+
+.raz-form__msg.is-loading { background: var(--raz-surface, #f9fafb); color: var(--raz-muted, #6b7280); }
+.raz-form__msg.is-success { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.raz-form__msg.is-error   { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }

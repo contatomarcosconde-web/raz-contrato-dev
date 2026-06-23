@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Tokens — fonte única de cores/tipografia/espaçamento (contrato §4/§9).
+   Espelha theme.json. Nunca repetir cor "mágica" fora daqui.
+   ========================================================================== */
+:root {
+	/* Cores — marca RAZ Consulting (minimalista monocromática) */
+	--raz-primary: #1a1a1a;
+	--raz-primary-dark: #000000;
+	--raz-accent: #1a1a1a;
+	--raz-ink: #1a1a1a;
+	--raz-muted: #9b9b9b;
+	--raz-line: #ececec;
+	--raz-surface: #fafafa;
+	--raz-base: #ffffff;
+
+	/* Superfície escura (quando uma seção precisar de contraste) */
+	--raz-dark: #111111;
+	--raz-dark-elev: #1a1a1a;
+
+	/* Tipografia — corpo monoespaçado + Playfair Display (logo/títulos serifados) */
+	--raz-font: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	--raz-font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+	--raz-fs-sm: 0.8125rem;
+	--raz-fs-md: 1rem;
+	--raz-fs-lg: 1.25rem;
+	--raz-fs-xl: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+	--raz-fs-2xl: clamp(2rem, 1.2rem + 3vw, 3.25rem);
+	--raz-lh: 1.6;
+
+	/* Espaçamento */
+	--raz-sp-1: 0.5rem;
+	--raz-sp-2: 1rem;
+	--raz-sp-3: 1.5rem;
+	--raz-sp-4: 2.5rem;
+	--raz-sp-5: 4rem;
+
+	/* Layout */
+	--raz-container: 1200px;
+	--raz-container-pad: 1.25rem;
+	--raz-radius: 0.5rem;
+	--raz-header-h: 72px;
+
+	/* Camadas */
+	--raz-z-header: 100;
+	--raz-z-drawer: 1000;
+	--raz-z-float: 900;
+	--raz-z-popup: 1100;
+}

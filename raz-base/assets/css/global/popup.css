@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Sistema de Popups — layout sempre FULL (tela cheia).
+   Espelha template-parts/global/popups.php + popup-engine.js.
+   O conteúdo interno (.raz-popup__content) é HTML livre do cliente.
+   ========================================================================== */
+.raz-popup[hidden] { display: none; }
+
+.raz-popup {
+	position: fixed;
+	inset: 0;
+	z-index: var(--raz-z-popup);
+	display: none;
+}
+.raz-popup.is-open { display: block; }
+
+.raz-popup__panel {
+	position: absolute;
+	inset: 0;
+	background: var(--raz-base);
+	overflow-y: auto;
+	opacity: 0;
+	transition: opacity 0.25s ease;
+}
+.raz-popup.is-open .raz-popup__panel { opacity: 1; }
+
+/* Conteúdo centralizado; o HTML do cliente manda no visual interno */
+.raz-popup__content {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: clamp(2.5rem, 6vw, 5rem) var(--raz-container-pad);
+	gap: var(--raz-sp-2);
+	text-align: center;
+}
+.raz-popup__content img { margin-inline: auto; }
+
+/* Botão de fechar (fixo, acima do conteúdo) */
+.raz-popup__close {
+	position: fixed;
+	top: clamp(0.75rem, 2vw, 1.5rem);
+	right: clamp(0.75rem, 2vw, 1.5rem);
+	z-index: 1;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	font-size: 1.75rem;
+	line-height: 1;
+	color: var(--raz-ink);
+	background: var(--raz-surface);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+	transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.raz-popup__close:hover { background: var(--raz-line); transform: scale(1.05); }
